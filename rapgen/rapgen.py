@@ -1,5 +1,9 @@
+import logging
+
 from argparser import create_arg_parser
 from data_handler import build_dataset, read_data
+
+logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
 if __name__ == '__main__':
     parser = create_arg_parser()
