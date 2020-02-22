@@ -2,6 +2,7 @@ from argparse import ArgumentParser
 
 
 def create_arg_parser():
+    """ Creates an argument parser that handles input and output file names. """
     cmd_line_parser = ArgumentParser()
     cmd_line_parser.add_argument('-i',
                                  '--input',
