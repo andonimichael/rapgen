@@ -2,7 +2,7 @@ from argparse import ArgumentParser, ArgumentTypeError
 
 
 def create_arg_parser():
-    """ Creates an argument parser that handles input and output file names and vocabulary size. """
+    """ Creates an argument parser that handles an input directory, output file names, and vocabulary size. """
 
     def positive_integer(input_string):
         """ Validates that the input string is a positive integer. """
@@ -17,9 +17,9 @@ def create_arg_parser():
 
     cmd_line_parser = ArgumentParser()
     cmd_line_parser.add_argument('-i',
-                                 '--input',
-                                 dest='input_file',
-                                 help='The input file',
+                                 '--input_directory',
+                                 dest='input_directory',
+                                 help='The input directory',
                                  required=True)
     cmd_line_parser.add_argument('-o',
                                  '--output',
